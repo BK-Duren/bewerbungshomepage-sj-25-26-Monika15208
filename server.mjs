@@ -47,3 +47,7 @@ app.get("/index", (request, response) => {
 var listener = app.listen(process.env.PORT, () => {
   console.log(`Your app is listening on port ${listener.address().port}`);
 });
+// Routing der impressum.html als /impressum
+app.get("/impressum", (request, response) => {
+  response.sendFile(`${__dirname}/views/impressum.html`);
+});
